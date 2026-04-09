@@ -1,13 +1,6 @@
 <?php
-session_start();
-
-// Se não houver a marcação de que o caixa foi aberto, volta para a abertura
-if (!isset($_SESSION['caixa_aberto']) || $_SESSION['caixa_aberto'] !== true) {
-    header("Location: abertura_caixa.php");
-    exit();
-}
+require_once "../src/controllers/trava.php"; 
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 

@@ -1,9 +1,5 @@
 <?php
-session_start();
-if (!isset($_SESSION['logado'])) {
-    header("Location: login_view.php");
-    exit();
-}
+require_once "../src/controllers/trava.php"; 
 ?>
 <!DOCTYPE html>
 <html lang="en">
