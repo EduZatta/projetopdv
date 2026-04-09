@@ -1,6 +1,17 @@
 <?php
-// Não permite que o usuario passe de pagina pela barra do navegador
-require_once "../src/controllers/trava.php"; 
+session_start(); // Inicia a sessão
+
+// Se usuário não estiver logado volta pro login
+if (!isset($_SESSION['usuario'])) {
+    header("Location: ../../views/login_view.php");
+    exit();
+}
+
+// Verifica se o caixa foi aberto
+if (!isset($_SESSION['caixa_aberto'])) {
+    header("Location: ../controllers/abrir_caixa.php"); // redireciona para abertura de caixa
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -24,13 +35,13 @@ require_once "../src/controllers/trava.php";
                 <ul>
                     <li class="active"><a href="dashboard.php">🏠 Dashboard</a></li>
                     <li><a href="produtos.php">📦 Estoque</a></li>
-                    <li><a href="venda.php">💰 Nova Venda</a></li>
+                    <li><a href="../../views/venda.php">💰 Nova Venda</a></li>
                     <li><a href="clientes.php">👥 Clientes</a></li>
                 </ul>
             </nav>
             <div class="sidebar-footer">
                 <p>Operador: <strong><?php echo $_SESSION['usuario']; ?></strong></p>
-                <a href="../src/Controllers/logout.php" class="btn-logout">Sair do Sistema</a>
+                <a href="../../src/Controllers/logout.php" class="btn-logout">Sair do Sistema</a>
             </div>
         </aside>
 

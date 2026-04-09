@@ -89,3 +89,12 @@ button:active {
         padding: 25px;
     }
 }
+
+.alert.error {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
