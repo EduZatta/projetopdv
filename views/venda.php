@@ -1,6 +1,4 @@
 <?php
-// Não permite que o usuario passe de pagina pela barra do navegador
-require_once "../src/controllers/trava.php";
 
 if (!isset($_SESSION['caixa_aberto'])) {
     header("Location: abertura_caixa.php");
@@ -12,7 +10,7 @@ if (!isset($_SESSION['caixa_aberto'])) {
 <head>
     <meta charset="UTF-8">
     <title>Vendas</title>
-    <link rel="stylesheet" href="../css/venda.css">
+    <link rel="stylesheet" href="../../css/venda.css">
 </head>
 <body>
     <header>

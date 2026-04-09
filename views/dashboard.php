@@ -35,13 +35,13 @@ if (!isset($_SESSION['caixa_aberto'])) {
                 <ul>
                     <li class="active"><a href="dashboard.php">🏠 Dashboard</a></li>
                     <li><a href="produtos.php">📦 Estoque</a></li>
-                    <li><a href="../../views/venda.php">💰 Nova Venda</a></li>
+                    <li><a href="../src/controllers/venda_controller.php">💰 Nova Venda</a></li>
                     <li><a href="clientes.php">👥 Clientes</a></li>
                 </ul>
             </nav>
             <div class="sidebar-footer">
                 <p>Operador: <strong><?php echo $_SESSION['usuario']; ?></strong></p>
-                <a href="../../src/Controllers/logout.php" class="btn-logout">Sair do Sistema</a>
+                <a href="../../../Controllers/logout.php" class="btn-logout">Sair do Sistema</a>
             </div>
         </aside>
 
@@ -72,7 +72,7 @@ if (!isset($_SESSION['caixa_aberto'])) {
             <section class="quick-actions">
                 <h2>Ações Rápidas</h2>
                 <div class="actions-grid">
-                    <a href="venda.php" class="action-btn primary">Iniciar Nova Venda</a>
+                    <a href="../src/controllers/venda_controller.php" class="action-btn primary">Iniciar Nova Venda</a>
                     <a href="produtos.php" class="action-btn">Cadastrar Produto</a>
                 </div>
             </section>
