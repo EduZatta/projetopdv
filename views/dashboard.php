@@ -1,12 +1,16 @@
-<?php 
+<?php
 session_start();
-if (!isset($_SESSION['logado'])) {
-    header("Location: login_view.php");
+
+// Se não houver a marcação de que o caixa foi aberto, volta para a abertura
+if (!isset($_SESSION['caixa_aberto']) || $_SESSION['caixa_aberto'] !== true) {
+    header("Location: abertura_caixa.php");
     exit();
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +18,7 @@ if (!isset($_SESSION['logado'])) {
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/dashboard.css">
 </head>
+
 <body>
 
     <div class="container">
@@ -70,4 +75,5 @@ if (!isset($_SESSION['logado'])) {
     </div>
 
 </body>
+
 </html>

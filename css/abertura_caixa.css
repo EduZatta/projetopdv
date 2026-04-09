@@ -1,0 +1,91 @@
+/* Importando uma fonte moderna */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f0f2f5; /* Fundo levemente cinza */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilo do Card (Formulário) */
+form {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h3 {
+    color: #1a1a1a;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+label {
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+/* Estilo do Input de Valor */
+input[type="number"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 25px;
+    border: 2px solid #e1e1e1;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 600;
+    color: #2d3436;
+    transition: border-color 0.3s ease;
+    outline: none;
+}
+
+input[type="number"]:focus {
+    border-color: #00a8ff; /* Azul ao clicar */
+}
+
+/* Estilo do Botão */
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #00b894; /* Verde sucesso */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #009374;
+}
+
+button:active {
+    transform: scale(0.98); /* Efeito de clique */
+}
+
+/* Ajuste para celular */
+@media (max-width: 480px) {
+    form {
+        width: 90%;
+        padding: 25px;
+    }
+}

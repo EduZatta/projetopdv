@@ -19,7 +19,7 @@ if ($loginSucesso) {
     $_SESSION['usuario'] = $nomeDigitado; // Agora a variável existe para o Dashboard!
     
     // Redireciona para o Dashboard
-    header("Location: ../../views/dashboard.php");
+    header("Location: ../../views/abertura_caixa.php");
     exit();
 } else {
     // Se falhar:
