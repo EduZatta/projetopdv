@@ -1,0 +1,94 @@
+body {
+    font-family: 'Poppins', sans-serif !important;
+    background-color: #b0a1dd !important; /* Cor lilás do fundo */
+    height: 100vh;
+    margin: 0;
+}
+
+section.section-login {
+    border: none !important;
+    border-radius: 15px !important;
+    background-color: #ffffff !important;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15) !important;
+}
+
+.section-login .form-label {
+    color: #000000 !important; 
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+    opacity: 1 !important; /* Garante que não haja transparência */
+}
+
+/* Estilização dos containers de input */
+.section-login .input-container {
+    background-color: #ffffff !important;
+    border: 1px solid #ced4da !important;
+    border-radius: 8px !important;
+    padding: 2px 10px !important;
+}
+
+/* Garantindo que o texto digitado e o ícone fiquem escuros */
+.section-login .input-container .icon {
+    color: #333333 !important;
+}
+
+.section-login .form-control {
+    color: #000000 !important; /* Texto que o usuário digita em preto */
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Placeholder */
+.section-login .form-control::placeholder {
+    color: #888888 !important;
+}
+
+/* Botão */
+.section-login .btn-login {
+    background-color: #4a4ae1 !important;
+    border: none !important;
+    font-weight: 600 !important;
+    padding: 10px !important;
+    width: 90%; /* Para celulares ocupar 90% da largura da tela */
+    max-width: 400px; /* Em telas grandes travar nos 400px */
+    margin: auto;
+}
+.cart-img {
+    /* Define um tamanho fixo proporcional ao card */
+    width: 80px; 
+    height: 80px;
+    
+    /* Garante que a imagem não distorça */
+    object-fit: contain; 
+    
+    /* Espaçamento para não colar no topo ou no título */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+    /* Suaviza a renderização */
+    display: block;
+}
+
+
+.cart-img {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+}
+
+.alert-erro {
+    background-color: #f8d7da;
+    color: #842029;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #f5c2c7;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 600;
+    /* Faz o alerta aparecer suavemente */
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
