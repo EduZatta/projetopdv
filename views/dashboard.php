@@ -1,4 +1,5 @@
 <?php
+// Não permite que o usuario passe de pagina pela barra do navegador
 require_once "../src/controllers/trava.php"; 
 ?>
 <!DOCTYPE html>
