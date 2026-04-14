@@ -12,7 +12,8 @@
         <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
         <nav id="menu-dropdown" class="menu-dropdown">
-            <a href="sangria.php">💰 Sangria</a>
+            <a href="../../views/sangria.php">💰 Sangria</a>
+            <a href="suprimento.php">➕ Suprimento</a>
             <a href="fechamento_caixa.php">📊 Fechamento de Caixa</a>
         </nav>
 
