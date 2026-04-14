@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<form action="../src/controllers/abrir_caixa.php" method="POST">
+<form action="../src/controllers/abrir_caixa_controller.php" method="POST">
     <h3>Abertura de Caixa</h3>
 
     <label>Digite o valor</label>
