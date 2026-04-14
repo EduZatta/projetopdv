@@ -1,18 +1,3 @@
-<?php
-session_start(); // Inicia a sessão
-
-// Se usuário não estiver logado volta pro login
-if (!isset($_SESSION['usuario'])) {
-    header("Location: ../../views/login_view.php");
-    exit();
-}
-
-// Verifica se o caixa foi aberto
-if (!isset($_SESSION['caixa_aberto'])) {
-    header("Location: ../controllers/abrir_caixa.php"); // redireciona para abertura de caixa
-    exit();
-}
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -21,7 +6,7 @@ if (!isset($_SESSION['caixa_aberto'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PDV Master | Dashboard</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../../css/dashboard.css">
 </head>
 
 <body>
@@ -35,13 +20,13 @@ if (!isset($_SESSION['caixa_aberto'])) {
                 <ul>
                     <li class="active"><a href="dashboard.php">🏠 Dashboard</a></li>
                     <li><a href="produtos.php">📦 Estoque</a></li>
-                    <li><a href="../src/controllers/venda_controller.php">💰 Nova Venda</a></li>
+                    <li><a href="venda_controller.php">💰 Nova Venda</a></li>
                     <li><a href="clientes.php">👥 Clientes</a></li>
                 </ul>
             </nav>
             <div class="sidebar-footer">
                 <p>Operador: <strong><?php echo $_SESSION['usuario']; ?></strong></p>
-                <a href="../src/controllers/logout.php" class="btn-logout">Sair do Sistema</a>
+                <a href="logout.php" class="btn-logout">Sair do Sistema</a>
             </div>
         </aside>
 
@@ -72,7 +57,7 @@ if (!isset($_SESSION['caixa_aberto'])) {
             <section class="quick-actions">
                 <h2>Ações Rápidas</h2>
                 <div class="actions-grid">
-                    <a href="../src/controllers/venda_controller.php" class="action-btn primary">Iniciar Nova Venda</a>
+                    <a href="venda_controller.php" class="action-btn primary">Iniciar Nova Venda</a>
                     <a href="produtos.php" class="action-btn">Cadastrar Produto</a>
                 </div>
             </section>

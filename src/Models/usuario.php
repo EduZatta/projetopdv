@@ -1,7 +1,7 @@
 <?php
 
 class Usuario {
-    // Simulando um banco de dados. Depois você pode trocar por um SELECT no PDO.
+    // Simulando um banco de dados
     private $usuarioDB = "admin";
     private $senhaDB = "123";
 

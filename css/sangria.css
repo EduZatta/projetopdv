@@ -1,0 +1,159 @@
+/* Importação de fonte  */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header estilizado */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1.2rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+header h2 {
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+/* Ajuste do botao de voltar */
+.btn-voltar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: #f0543a; /* Laranja Coral da imagem */
+    color: #ffffff !important;  /* Texto sempre branco */
+    padding: 10px 25px;         /* Espaçamento interno */
+    border-radius: 12px;        /* Bordas arredondadas do design */
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-voltar:hover {
+    background-color: #d94a32; /* Tom levemente mais escuro */
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+
+.btn-voltar:active {
+    transform: scale(0.96); /* Efeito de clique */
+}
+/* -------------------------------------------------- */
+
+/* Container principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px 20px;
+    min-height: 90vh;
+}
+
+/* Card da Sangria */
+.card-sangria {
+    background: #fff;
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border-top: 5px solid #e74c3c;
+}
+
+/* Estilização dos grupos de campos */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #2c3e50;
+    font-size: 0.95rem;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dcdde1;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: #e74c3c;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(231, 76, 60, 0.2);
+}
+
+/* Ações do Formulário, Confirmar e Limpar */
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.btn-confirmar {
+    background-color: #27ae60; /* Verde para confirmar */
+    color: white;
+}
+
+.btn-confirmar:hover {
+    background-color: #219150;
+}
+
+.btn-cancelar {
+    background-color: #bdc3c7;
+    color: #2c3e50;
+}
+
+.btn-cancelar:hover {
+    background-color: #95a5a6;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .form-actions {
+        flex-direction: column;
+    }
+}

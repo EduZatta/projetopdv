@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>PDV - Realizar Sangria</title>
-    <link rel="stylesheet" href="css/estilo.css"> </head>
+    <link rel="stylesheet" href="../css/sangria.css"> </head>
 <body>
 
     <header>
@@ -22,7 +22,7 @@
 
                 <div class="form-group">
                     <label for="observacao">Motivo / Observação:</label>
-                    <textarea name="observacao" id="observacao" rows="4" placeholder="Ex: Sangria de segurança ou pagamento de fornecedor" required></textarea>
+                    <textarea name="observacao" id="observacao" rows="4" placeholder="Ex. Pagamento de mercadoria"></textarea>
                 </div>
 
                 <div class="form-actions">

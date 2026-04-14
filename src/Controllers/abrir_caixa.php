@@ -1,20 +1,32 @@
 <?php
 session_start();
-require_once "trava.php"; // garante que usuário está logado
+require_once "trava.php"; // Verifica se o usuário está logado
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    
+    // 1. Pega o valor inicial e garante que é um número
+    $valorInicial = filter_input(INPUT_POST, 'valor_inicial', FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
 
-    // pega o valor digitado pelo usuário
-    $valor = floatval($_POST['valor_inicial'] ?? 0);
+    if ($valorInicial !== false && $valorInicial >= 0) {
+        
+        // 2. Define o estado do caixa na sessão
+        $_SESSION['caixa_aberto'] = true;
+        
+        // Armazenamos como 'saldo_atual', pois toda sangria/suprimento 
+        // vai somar ou subtrair deste valor daqui para frente.
+        $_SESSION['saldo_atual'] = (float)$valorInicial;
+        $_SESSION['valor_abertura'] = (float)$valorInicial; // Para fins de relatório depois
+        $_SESSION['hora_abertura'] = date('H:i:s');
 
-    // marca o caixa como aberto
-    $_SESSION['caixa_aberto'] = true;
-    $_SESSION['valor_suprimento'] = $valor;
-
-    // redireciona direto para dashboard
-    header("Location: ../../views/dashboard.php");
-    exit();
+        // 3. Redireciona para o Controller da Dashboard
+        header("Location: dashboard_controller.php");
+        exit();
+    } else {
+        // Se o valor for negativo ou inválido, volta para a tela com aviso
+        header("Location: ../../views/abertura_caixa.php?erro=valor_invalido");
+        exit();
+    }
 }
 
-// se acessar sem POST, apenas mostra a tela de abertura
+// Se o acesso for via GET (apenas abrir a página), carrega a view
 require_once "../../views/abertura_caixa.php";
