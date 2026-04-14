@@ -13,12 +13,12 @@
 
         <nav id="menu-dropdown" class="menu-dropdown">
             <a href="../../views/sangria.php">💰 Sangria</a>
-            <a href="suprimento.php">➕ Suprimento</a>
+            <a href="../../views/suprimento.php">➕ Suprimento</a>
             <a href="fechamento_caixa.php">📊 Fechamento de Caixa</a>
         </nav>
 
         <h1>🛒 Nova Venda</h1>
-        <a href="../../views/dashboard.php" class="btn-voltar">Voltar ao Painel</a>
+        <a href="dashboard_controller.php" class="btn-voltar">Voltar ao Painel</a>
     </header>
 
     <main class="container">

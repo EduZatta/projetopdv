@@ -8,7 +8,7 @@
 
     <header>
         <h2>Fluxo de Caixa: Sangria</h2>
-        <a href="venda.php" class="btn-voltar">Voltar para Vendas</a>
+        <a href="../src/Controllers/venda_controller.php" class="btn-voltar">Voltar para Vendas</a>
     </header>
 
     <main class="container">
