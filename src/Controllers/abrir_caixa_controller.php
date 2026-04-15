@@ -12,8 +12,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // 2. Define o estado do caixa na sessão
         $_SESSION['caixa_aberto'] = true;
         
-        // Armazenamos como 'saldo_atual', pois toda sangria/suprimento 
-        // vai somar ou subtrair deste valor daqui para frente.
+        // Armazenado como 'saldo_atual' pois toda sangria/suprimento 
+        // vai somar ou subtrair deste valor
         $_SESSION['saldo_atual'] = (float)$valorInicial;
         $_SESSION['valor_abertura'] = (float)$valorInicial; // Para fins de relatório depois
         $_SESSION['hora_abertura'] = date('H:i:s');

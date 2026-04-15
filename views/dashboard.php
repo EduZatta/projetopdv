@@ -19,7 +19,7 @@
             <nav>
                 <ul>
                     <li class="active"><a>🏠 Dashboard </a></li>
-                    <li><a href="produtos.php">📦 Estoque</a></li>
+                    <li><a href="estoque.php">📦 Estoque</a></li>
                     <li><a href="venda_controller.php">💰 Nova Venda</a></li>
                     <li><a href="clientes.php">👥 Clientes</a></li>
                 </ul>
@@ -43,7 +43,7 @@
                     <span class="trend">0 pedidos realizados</span>
                 </div>
                 <div class="stat-card">
-                    <h3>Produtos</h3>
+                    <h3>Estoque</h3>
                     <p class="value">--</p>
                     <span class="trend">Itens em estoque</span>
                 </div>
