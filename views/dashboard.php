@@ -19,7 +19,7 @@
             <nav>
                 <ul>
                     <li class="active"><a>🏠 Dashboard </a></li>
-                    <li><a href="estoque.php">📦 Estoque</a></li>
+                    <li><a href="estoque_controller.php">📦 Estoque</a></li>
                     <li><a href="venda_controller.php">💰 Nova Venda</a></li>
                     <li><a href="clientes.php">👥 Clientes</a></li>
                 </ul>
