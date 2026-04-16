@@ -2,10 +2,10 @@
 // src/Controllers/autenticacao.php
 session_start();
 
-// Importa o Model do Usuário
+// importa o Model do Usuário
 require_once "../Models/Usuario.php";
 
-// Captura os dados do formulário
+// captura os dados do formulário
 $nomeDigitado  = $_POST['nome'] ?? '';
 $senhaDigitada = $_POST['senha'] ?? '';
 
@@ -14,15 +14,15 @@ $usuarioModel = new Usuario();
 $loginSucesso = $usuarioModel->validar($nomeDigitado, $senhaDigitada);
 
 if ($loginSucesso) {
-    // Se estiver tudo OK:
+    // Se estiver tudo certo:
     $_SESSION['logado'] = true;
-    $_SESSION['usuario'] = $nomeDigitado; // Agora a variável existe para o Dashboard!
+    $_SESSION['usuario'] = $nomeDigitado; 
     
     // Redireciona para o Dashboard
     header("Location: ../../views/abertura_caixa.php");
     exit();
 } else {
-    // Se falhar:
+    // Caso falhe:
     header("Location: ../../views/login_view.php?erro=dados_invalidos");
     exit();
 }

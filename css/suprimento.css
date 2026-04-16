@@ -126,7 +126,7 @@ button:active {
     font-family: Arial, sans-serif;
     font-size: 16px;
     text-align: center;
-    position: fixed; /* Fixa no topo */
+    position: fixed; 
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
