@@ -1,16 +1,20 @@
-<?php 
-if (isset($_SESSION['msg'])) { 
+<?php
+session_start();
+if (isset($_SESSION['msg'])) {
     $tipo = $_SESSION['tipo'] ?? 'sucesso';
-    echo "<p class='mensagem {$tipo}'>" . $_SESSION['msg'] . "</p>"; 
+    echo "<p class='mensagem {$tipo}'>" . $_SESSION['msg'] . "</p>";
     unset($_SESSION['msg'], $_SESSION['tipo']);
-} 
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>PDV - Realizar Sangria</title>
-    <link rel="stylesheet" href="../css/sangria.css"> </head>
+    <link rel="stylesheet" href="../css/sangria.css">
+</head>
+
 <body>
 
     <header>
@@ -21,7 +25,7 @@ if (isset($_SESSION['msg'])) {
     <main class="container">
         <div class="card-sangria">
             <form action="../src/Controllers/sangria_controller.php" method="POST">
-                
+
                 <div class="form-group">
                     <label for="valor">Valor da Retirada (R$):</label>
                     <input type="number" step="0.01" name="valor" id="valor" placeholder="0,00" required autofocus>
@@ -42,4 +46,5 @@ if (isset($_SESSION['msg'])) {
     </main>
 
 </body>
+
 </html>
